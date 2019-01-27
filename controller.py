@@ -2,18 +2,9 @@ import model
 import view
 
 
-def request_guess():
-    while True:
-        try:
-            guess = int(view.ask_for_guess())
-        except ValueError as message:
-            view.display_error(message)
-        else:
-            break
-
-
 def start_game():
-    random_number = model.random_number()
+    model.generate_random_number()
+    print(view.ask_for_guess())
     # attempts = 0
     #
     # print("Welcome to the number guessing game.")
@@ -31,7 +22,6 @@ def start_game():
     #         break
     #
     # print(f"It took you {attempts} attempts.")
-    request_guess()
 
 
 if __name__ == '__main__':
