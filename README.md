@@ -3,7 +3,7 @@
 Number Guessing Game is a command-line application game. The player has to guess a random number between 1 and 10.
 ### Prerequisites
 ```
-- Python
+- Python 3.x
 ```
 ### Installation
 To run the application, open the command-line interface and type:
