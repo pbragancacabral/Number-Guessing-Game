@@ -24,21 +24,22 @@ def ask_option():
 def ask_for_guess():
     guess = int(input("Please select a number between 1 and 10: "))
     if guess < 1 or guess > 10:
-        raise ValueError("That number is out of range.")
+        raise ValueError("That number is out of range")
     return guess
 
 
 def give_hint(user_guess, answer):
     if user_guess != answer:
         if user_guess < answer:
-            print("Try higher.")
+            print("Try higher")
         else:
-            print("Try lower.")
+            print("Try lower")
 
 
 def guess():
     global high_score
-    print("High score (least guesses):", "not set" if high_score is None else high_score)
+    print("High score (least guesses):",
+          "not set" if high_score is None else high_score)
     answer = random.randint(1, 10)
     user_guess = None
     number_of_attempts = 0
@@ -79,7 +80,7 @@ def display_menu():
                 clear_screen()
                 guess()
             else:
-                raise ValueError("That's not an option.")
+                raise ValueError("That's not an option")
         except ValueError as error:
             display_error(error)
         else:
